@@ -1,5 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment } from "../store/actions/counter.actions";
+import {
+  decrementAction,
+  incrementAction,
+} from "../store/actions/counter.actions";
 import { countSelector } from "../store/selectors/counter.selector";
 
 export default function Home() {
@@ -12,7 +15,7 @@ export default function Home() {
       <div>
         <button
           style={{ height: 100, width: 200, marginTop: 100 }}
-          onClick={() => dispatch(increment())}
+          onClick={() => dispatch(incrementAction())}
         >
           increment
         </button>
@@ -20,7 +23,7 @@ export default function Home() {
       <div>
         <button
           style={{ height: 100, width: 200, marginTop: 100 }}
-          onClick={() => dispatch(decrement())}
+          onClick={() => dispatch(decrementAction())}
         >
           decrement
         </button>
